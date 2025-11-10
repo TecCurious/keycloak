@@ -449,7 +449,7 @@ public class RealmManager {
 
             accountClient.setRootUrl(Constants.AUTH_BASE_URL_PROP);
 
-            String baseUrl = "/realms/" + Encode.encodePathAsIs(realm.getName()) + "/account/";
+            String baseUrl = "/org/" + Encode.encodePathAsIs(realm.getName()) + "/account/";
             accountClient.setBaseUrl(baseUrl);
             accountClient.addRedirectUri(baseUrl + "*");
             accountClient.setAttribute(OIDCConfigAttributes.POST_LOGOUT_REDIRECT_URIS, "+");

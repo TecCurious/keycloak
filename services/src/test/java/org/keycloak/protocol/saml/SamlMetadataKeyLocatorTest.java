@@ -49,7 +49,7 @@ public class SamlMetadataKeyLocatorTest {
     private static final String EXPIRED_CERT = "MIIDQTCCAimgAwIBAgIUT8qwq3DECizGLB2tQAaaNSGAVLgwDQYJKoZIhvcNAQELBQAwMDEuMCwGA1UEAwwlaHR0cDovL2xvY2FsaG9zdDo4MDgwL3NhbGVzLXBvc3Qtc2lnLzAeFw0yMzAxMjcxNjAwMDBaFw0yMzAxMjgxNjAwMDBaMDAxLjAsBgNVBAMMJWh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9zYWxlcy1wb3N0LXNpZy8wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDdIwQZjDffQJL75c/QqqgXPZR7NTFkCGQu/kL3eF/kU8bD1Ck+aKakZyw3xELLgMNg4atu4kt3waSgEKSanvFOpAzH+etS/MMIBYBRKfGcFWAKyr0pukjmx1pw4d3SgQj2lB1FDvVGP62Kl4i34XLxLXtuSkYFiNCTfF26wxfwT0tHTiSynQL2jaa9f5TRAKsXwepUII72Awkk04Zqi3trf5BpNac2s+C6Ey4eAnouWzI5Rg0VDDmt3GzxXPaY6wga9afUSb9z4oJwyW1MiE6ENjfNbdmsUvdXCriRNDviO71CnWrLJA44maKDosubfUtC9Ac9BaRjutFyn1UExE9xAgMBAAGjUzBRMB0GA1UdDgQWBBR4R5i1kWMxzzdQ3TdgI/MuNLChSDAfBgNVHSMEGDAWgBR4R5i1kWMxzzdQ3TdgI/MuNLChSDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAacI/f9YFVTUCGXfh/FCVBQI20bgOs9D6IpIhN8L5kEnY6Ox5t00b9G5Bz64alK3WMR3DdhTEpufX8IMFpMlme/JnnOQXkfmIvzbev4iIKxcKFvS8qNXav8PVxwDApuzgxEq/XZCtFXhDS3q1jGRmlOr+MtQdCNQuJmxy7kOoFPY+UYjhSXTZVrCyFI0LYJQfcZ69bYXd+5h1U3UsN4ZvsBgnrz/IhhadaCtTZVtvyr/uzHiJpqT99VO9/7lwh2zL8ihPyOUVDjdYxYyCi+BHLRB+udnVAfo7t3fbxMi1gV9xVcYaqTJgSArsYM8mxv8p5mhTa8TJknzs4V3Dm+PHs";
 
     private static final String DESCRIPTOR
-            = "<md:EntityDescriptor xmlns=\"urn:oasis:names:tc:SAML:2.0:metadata\" xmlns:md=\"urn:oasis:names:tc:SAML:2.0:metadata\" xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" entityID=\"http://localhost:8080/realms/keycloak\" cacheDuration=\"P1D\">"
+            = "<md:EntityDescriptor xmlns=\"urn:oasis:names:tc:SAML:2.0:metadata\" xmlns:md=\"urn:oasis:names:tc:SAML:2.0:metadata\" xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\" xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\" entityID=\"http://localhost:8080/org/keycloak\" cacheDuration=\"P1D\">"
             + "<md:IDPSSODescriptor WantAuthnRequestsSigned=\"true\" protocolSupportEnumeration=\"urn:oasis:names:tc:SAML:2.0:protocol\">"
             + "<md:KeyDescriptor use=\"signing\">"
             + "<ds:KeyInfo>"
@@ -67,19 +67,19 @@ public class SamlMetadataKeyLocatorTest {
             + "</ds:X509Data>"
             + "</ds:KeyInfo>"
             + "</md:KeyDescriptor>"
-            + "<md:ArtifactResolutionService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:SOAP\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml/resolve\" index=\"0\"></md:ArtifactResolutionService>"
-            + "<md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml\"></md:SingleLogoutService>"
-            + "<md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml\"></md:SingleLogoutService>"
-            + "<md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml\"></md:SingleLogoutService>"
-            + "<md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:SOAP\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml\"></md:SingleLogoutService>"
+            + "<md:ArtifactResolutionService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:SOAP\" Location=\"http://localhost:8080/org/keycloak/protocol/saml/resolve\" index=\"0\"></md:ArtifactResolutionService>"
+            + "<md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Location=\"http://localhost:8080/org/keycloak/protocol/saml\"></md:SingleLogoutService>"
+            + "<md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect\" Location=\"http://localhost:8080/org/keycloak/protocol/saml\"></md:SingleLogoutService>"
+            + "<md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact\" Location=\"http://localhost:8080/org/keycloak/protocol/saml\"></md:SingleLogoutService>"
+            + "<md:SingleLogoutService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:SOAP\" Location=\"http://localhost:8080/org/keycloak/protocol/saml\"></md:SingleLogoutService>"
             + "<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>"
             + "<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>"
             + "<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>"
             + "<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>"
-            + "<md:SingleSignOnService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml\"></md:SingleSignOnService>"
-            + "<md:SingleSignOnService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml\"></md:SingleSignOnService>"
-            + "<md:SingleSignOnService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:SOAP\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml\"></md:SingleSignOnService>"
-            + "<md:SingleSignOnService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact\" Location=\"http://localhost:8080/realms/keycloak/protocol/saml\"></md:SingleSignOnService>"
+            + "<md:SingleSignOnService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" Location=\"http://localhost:8080/org/keycloak/protocol/saml\"></md:SingleSignOnService>"
+            + "<md:SingleSignOnService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect\" Location=\"http://localhost:8080/org/keycloak/protocol/saml\"></md:SingleSignOnService>"
+            + "<md:SingleSignOnService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:SOAP\" Location=\"http://localhost:8080/org/keycloak/protocol/saml\"></md:SingleSignOnService>"
+            + "<md:SingleSignOnService Binding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact\" Location=\"http://localhost:8080/org/keycloak/protocol/saml\"></md:SingleSignOnService>"
             + "</md:IDPSSODescriptor>"
             + "</md:EntityDescriptor>";
 

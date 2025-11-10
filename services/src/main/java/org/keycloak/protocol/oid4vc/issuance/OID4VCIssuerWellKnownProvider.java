@@ -538,7 +538,7 @@ public class OID4VCIssuerWellKnownProvider implements WellKnownProvider {
             return;
         }
 
-        int idxRealms = requestPath.indexOf("/realms/");
+        int idxRealms = requestPath.indexOf("/org/");
         int idxWellKnown = requestPath.indexOf("/.well-known/");
         boolean isOldRoute = idxRealms >= 0 && idxWellKnown > idxRealms;
         if (!isOldRoute) {

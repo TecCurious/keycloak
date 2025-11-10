@@ -64,7 +64,7 @@ import static org.keycloak.utils.MediaType.APPLICATION_JWT;
  * @version $Revision: 1 $
  */
 @Provider
-@Path("/realms")
+@Path("/org")
 public class RealmsResource {
     protected static final Logger logger = Logger.getLogger(RealmsResource.class);
 
