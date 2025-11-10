@@ -242,7 +242,7 @@ public class AdminEventBuilder {
         String path = uriInfo.getPath();
 
         StringBuilder sb = new StringBuilder();
-        sb.append("/realms/");
+        sb.append("/org/");
         sb.append(realm.getName());
         sb.append("/");
         String realmRelative = sb.toString();
